@@ -1,8 +1,8 @@
 
-// function last<T>(arr: T[]): T {
-//     let length = arr.length
-//     // return arr[length - 1];
-// }
+function last<T>(arr: T[]): T {
+    let length = arr.length
+    // return arr[length - 1];
+}
 
 type ApiResponse<T> = { success: boolean; data: T }
 
@@ -21,7 +21,7 @@ const locked: Readonly<User> = { id: 1, name: "A", email: "a@x.com", age: 20 };
 // locked.age = 21;                                // ERROR: read-only
 
 function getId<T extends { id: number }>(item: T): number {
-    return item.id;
+    //
 }
 getId({ id: 1, name: "x" });    // ok
 // getId({ name: "x" });           // ERROR: no id
